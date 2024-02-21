@@ -126,14 +126,13 @@ def update_chart(n_clicks, input_word, threshold):
         height=400
     )
 
-    # Update layout for better readability
-    fig.update_xaxes(tickangle=45, tickmode='array', tickvals=df_top_10.index, showgrid=False)
+    fig.update_xaxes(tickangle=45, showgrid=False)
 
-    # Add interactive hover information
+    
     fig.update_traces(hovertemplate='Word: %{x}<br>Edit Distance: %{y}')
 
     return fig
 
-# Run the app
+
 if __name__ == '__main__':
     app.run_server(debug=True)
